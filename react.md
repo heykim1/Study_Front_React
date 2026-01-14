@@ -26,7 +26,9 @@ node_modules는 gitignore에 넣든지 해라..(무거움) -> npm i하면 됨
 
 컴포넌트 기반, 화면 업데이트 구현이 빠르고 좋음
 선언형 프로그래밍-목적만 명시(js는 명령형)
-
+index.html페이지 하나만 사용 -> 요소를 그리는 것
+main.jsx: react를 dom과 연결해 줌(초기화)
+index.html과 main.jsx는 기초 틀(설정) -> App.jsx부터가 리액트 시작이라고 보면 됨
 critical randering path
 : render tree -> layout -> painting
 js가 dom을 수정하면 위의 과정이 다시 일어남. reflow/repaint가 오래걸림
@@ -44,9 +46,10 @@ extension : eslint, prettier,
 
 ### 컴포넌트
 
-html을 return 하는 js함수. 이름 첫글자는 무조건 **대문자**
+html태그를 return 하는 js함수. 이름 첫글자는 무조건 **대문자**
 react는 jsx 문법을 사용하기때문에 html을 return 할 수 있다.
 & js값을 {중괄호}를 사용하여 html에 렌더링 할 수 있음
+export default한 컴포넌트는 {중괄호}없이 import가능.(관례...)
 주의사항
 
 1. 중괄호 내부에는 js표현식만 넣을 수 있다. (if/for문은 불가능)
